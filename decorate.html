@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>편지지 꾸미기</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">대신 전해드립니다</div>
+    <ul class="menu">
+      <li><a href="index.html">홈으로</a></li>
+      <li><a href="survey.html">설문조사하기</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>편지지 꾸미기 ✨</h1>
+    <p>배경과 폰트를 선택해서 나만의 편지를 만들어보세요</p>
+  </header>
+
+  <main>
+    <div class="decorate-options">
+      <label for="background">배경 선택:</label>
+      <input type="text" id="background" placeholder="배경 이미지 URL 입력">
+
+      <label for="font">폰트 선택:</label>
+      <select id="font">
+        <option value="Arial">Arial</option>
+        <option value="'Nanum Pen Script', cursive">Nanum Pen Script</option>
+        <option value="Georgia">Georgia</option>
+      </select>
+
+      <button id="apply-btn">적용하기</button>
+    </div>
+
+    <div id="letter-preview">
+      <p>여기에 꾸민 편지가 표시됩니다 💌</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

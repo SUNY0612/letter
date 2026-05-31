@@ -1,4 +1,12 @@
-// 질문 리스트
+// ===== 랜딩 페이지 버튼 기능 =====
+const startBtn = document.getElementById("start-btn");
+if (startBtn) {
+  startBtn.addEventListener("click", () => {
+    window.location.href = "survey.html";
+  });
+}
+
+// ===== 설문조사 기능 =====
 const questions = [
   "친구 이름은 무엇인가요?",
   "관계 기간은 얼마나 되나요?",
@@ -8,9 +16,7 @@ const questions = [
 ];
 
 let currentIndex = 0;
-let answers = [];
 
-// 카드 표시 함수
 function showQuestion(index) {
   const cardContainer = document.getElementById("card-container");
   if (cardContainer) {
@@ -23,36 +29,33 @@ function showQuestion(index) {
   }
 }
 
-// 다음 버튼 이벤트
 const nextBtn = document.getElementById("next-btn");
 if (nextBtn) {
   nextBtn.addEventListener("click", function() {
-    const input = document.getElementById(`answer${currentIndex}`);
-    if (input) answers[currentIndex] = input.value;
-
     if (currentIndex < questions.length - 1) {
       currentIndex++;
       showQuestion(currentIndex);
     } else {
-      generateMessage();
+      alert("설문이 끝났습니다! 답변이 저장되었습니다.");
     }
   });
 }
 
-// AI 멘트 생성 (간단 버전)
-function generateMessage() {
-  const friendName = answers[0] || "친구";
-  const duration = answers[1] || "짧지 않은 시간";
-  const impression = answers[2] || "좋은 인상";
-  const travel = answers[3] || "어딘가";
-  const finalWords = answers[4] || "고마워";
-
-  const message = `${friendName}와의 ${duration} 동안 ${impression}을 받았고, 
-  함께 ${travel}에 가고 싶어. 마지막으로 꼭 하고 싶은 말은 "${finalWords}"야.`;
-
-  const aiMessage = document.getElementById("aiMessage");
-  if (aiMessage) aiMessage.innerText = message;
-}
-
 // 첫 질문 표시
 showQuestion(currentIndex);
+
+// ===== 편지지 꾸미기 기능 =====
+const applyBtn = document.getElementById("apply-btn");
+if (applyBtn) {
+  applyBtn.addEventListener("click", function() {
+    const bgUrl = document.getElementById("background").value;
+    const font = document.getElementById("font").value;
+    const preview = document.getElementById("letter-preview");
+
+    if (bgUrl) {
+      preview.style.backgroundImage = `url(${bgUrl})`;
+      preview.style.backgroundSize = "cover";
+    }
+    preview.style.fontFamily = font;
+  });
+}

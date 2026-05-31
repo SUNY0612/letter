@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #6c5ce7; /* 기존 보라색 배경 유지 */
+  background: #6c5ce7;
   padding: 15px 30px;
   color: white;
 }
@@ -29,9 +29,9 @@
   text-decoration: underline;
 }
 
-/* 랜딩 페이지 (두 번째 사진 스타일 적용) */
+/* 랜딩 페이지 */
 body.landing {
-  background: linear-gradient(135deg, #a29bfe, #dfe6e9); /* 보라-화이트 그라데이션 */
+  background: linear-gradient(135deg, #a29bfe, #dfe6e9);
   color: #2d3436;
   font-family: 'Arial', sans-serif;
   text-align: center;
@@ -50,9 +50,9 @@ body.landing {
 }
 
 .hero h1 {
-  font-size: 3em; /* 두 번째 사진처럼 조금 작게 */
+  font-size: 3em;
   margin-bottom: 20px;
-  color: #6c5ce7; /* 보라색 강조 */
+  color: #6c5ce7;
 }
 
 .hero p {
@@ -60,7 +60,6 @@ body.landing {
   margin-bottom: 30px;
 }
 
-/* 시작 버튼 (그라데이션 적용) */
 .start-btn {
   display: inline-block;
   padding: 15px 40px;
@@ -103,9 +102,48 @@ body.landing {
   background: #341f97;
 }
 
-#result {
-  margin-top: 30px;
-  background: #dfe6e9;
-  padding: 20px;
+/* 꾸미기 페이지 */
+.decorate-options {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 500px;
+  text-align: left;
+}
+
+.decorate-options label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.decorate-options input,
+.decorate-options select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#apply-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #6c5ce7;
+  color: white;
+  border: none;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+#apply-btn:hover {
+  background: #341f97;
+}
+
+#letter-preview {
+  margin-top: 30px;
+  padding: 40px;
+  min-height: 200px;
+  border-radius: 15px;
+  background: #f1f2f6;
+  text-align: center;
 }
