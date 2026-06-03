@@ -14,17 +14,30 @@
     </ul>
   </nav>
 
-  <header>
+  <header class="page-header">
+    <p class="eyebrow">Survey</p>
     <h1>마음 설문</h1>
-    <p>질문에 답하면서 마음을 표현해보세요 💌</p>
+    <p>한 문항씩 넘기면서 편지에 담을 마음을 정리해보세요.</p>
   </header>
 
-  <main>
-    <div id="card-container"></div>
-    <button id="next-btn">다음 질문 ➡️</button>
+  <main class="survey-layout">
+    <section class="survey-panel" aria-label="마음 설문">
+      <div class="survey-progress">
+        <span id="progress-text">1 / 5</span>
+        <div class="progress-track" aria-hidden="true">
+          <span id="progress-bar"></span>
+        </div>
+      </div>
+
+      <div id="card-container" class="survey-slider" aria-live="polite"></div>
+
+      <div class="survey-actions">
+        <button id="prev-btn" class="secondary-btn" type="button">이전</button>
+        <button id="next-btn" class="primary-btn" type="button">다음</button>
+      </div>
+    </section>
   </main>
 
   <script src="script.js"></script>
 </body>
 </html>
-s

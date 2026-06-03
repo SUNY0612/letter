@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="landing">
-  <!-- 상단 네비게이션 -->
   <nav class="navbar">
     <div class="logo">대신 전해드립니다</div>
     <ul class="menu">
@@ -15,11 +14,23 @@
     </ul>
   </nav>
 
-  <!-- 메인 콘텐츠 -->
   <main class="hero">
-    <h1>마음 설문</h1>
-    <p>당신의 마음을 전할 수 있도록 도와드릴게요 💌</p>
-    <button id="start-btn" class="start-btn">시작하기 →</button>
+    <section class="hero-copy">
+      <p class="eyebrow">Personal Letter Builder</p>
+      <h1>마음을 정리하고 편지로 완성하세요</h1>
+      <p>설문으로 문장을 모으고, 편지지 꾸미기에서 분위기에 맞는 디자인을 골라 바로 확인할 수 있습니다.</p>
+      <div class="hero-actions">
+        <button id="start-btn" class="primary-btn">설문 시작</button>
+        <a class="secondary-link" href="decorate.html">편지지 꾸미기</a>
+      </div>
+    </section>
+
+    <aside class="hero-paper" aria-label="편지 미리보기 장식">
+      <div class="paper-pin"></div>
+      <p>Dear friend,</p>
+      <strong>오늘 전하고 싶은 말</strong>
+      <span>고마운 마음을 차분하게 적어 내려가는 편지 공간</span>
+    </aside>
   </main>
 
   <footer>

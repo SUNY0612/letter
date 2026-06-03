@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>편지지 꾸미기</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 </head>
 <body>
   <nav class="navbar">
@@ -15,29 +14,44 @@
     </ul>
   </nav>
 
-  <header>
-    <h1>편지지 꾸미기 ✨</h1>
-    <p>배경과 폰트를 선택해서 나만의 편지를 만들어보세요</p>
+  <header class="page-header">
+    <p class="eyebrow">Letter Studio</p>
+    <h1>편지지 꾸미기</h1>
+    <p>편지지, 눈누 폰트, 문장을 고르고 적용하면 바로 완성된 편지지가 나타납니다.</p>
   </header>
 
-  <main>
-    <div class="decorate-options">
-      <label for="background">배경 선택:</label>
-      <input type="text" id="background" placeholder="배경 이미지 URL 입력">
+  <main class="decorate-layout">
+    <section class="decorate-options" aria-label="편지지 설정">
+      <div class="field-group">
+        <label for="paper">편지지 선택</label>
+        <select id="paper">
+          <option value="paper-classic">클래식 레터</option>
+          <option value="paper-note">노트 편지지</option>
+          <option value="paper-mint">민트 포스트</option>
+        </select>
+      </div>
 
-      <label for="font">폰트 선택:</label>
-      <select id="font">
-        <option value="Arial">Arial</option>
-        <option value="'Nanum Pen Script', cursive">Nanum Pen Script</option>
-        <option value="Georgia">Georgia</option>
-      </select>
+      <div class="field-group">
+        <label for="font">눈누 폰트 선택</label>
+        <select id="font">
+          <option value="'OngleipKonkon', cursive">온글잎 콘콘체</option>
+          <option value="'SchoolSafetyHalfMoon', sans-serif">학교안심 반달</option>
+          <option value="'Suit', sans-serif">수트</option>
+        </select>
+      </div>
 
-      <button id="apply-btn">적용하기</button>
-    </div>
+      <div class="field-group">
+        <label for="letter-message">편지 내용</label>
+        <textarea id="letter-message" rows="7">고마웠던 순간들이 오래 기억에 남아.
+오늘은 그 마음을 조금 더 예쁘게 전하고 싶어.</textarea>
+      </div>
 
-    <div id="letter-preview">
-      <p>여기에 꾸민 편지가 표시됩니다 💌</p>
-    </div>
+      <button id="apply-btn" class="primary-btn">적용하기</button>
+    </section>
+
+    <section class="preview-stage" aria-label="편지지 미리보기">
+      <article id="letter-preview" class="letter-preview paper-classic" hidden></article>
+    </section>
   </main>
 
   <script src="script.js"></script>
